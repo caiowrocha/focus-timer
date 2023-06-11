@@ -1,0 +1,97 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Reseting Font-size */
+  font-size: 62.5%;
+  /* Fonts */
+  --ff-primary: 'Roboto', sans-serif;
+
+  /* Colors */
+  --text-color: #29292E;
+  --bg-primary: #FFF;
+  --bg-btn-press: #02799D;
+  --bg-btn: #E1E1E6;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: 12.6rem;
+  font-weight: 500;
+  display: grid;
+  height: 100vh;
+}
+
+main {
+  justify-self: center;
+  align-self: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.focus-wrap {
+  display: flex;
+  gap: clamp(1rem, 2rem + 10vw, 15.2rem);
+}
+
+#timer {
+  display: flex;
+  margin-top: 4.4rem;
+}
+
+#controls {
+  display: flex;
+  gap: clamp(1rem, 3rem + 1vw, 4rem);
+  width: clamp(2rem, 2rem + 5vw, 22.8rem);
+  height: clamp(8rem, 3rem + 10vw, 10.8rem);
+}
+
+#sounds {
+  display: grid;
+  grid-template-areas: "A B" "C D";
+  gap: 3.0rem;
+}
+
+.playing svg path:nth-child(1) {
+  fill: var(--bg-btn-press);
+}
+
+.playing svg path:nth-child(2) {
+  fill: var(--bg-primary);
+}
+
+main #sounds:nth-child(1) {
+  grid-area: A;
+}
+main #sounds:nth-child(2) {
+  grid-area: B;
+}
+main #sounds:nth-child(3) {
+  grid-area: C;
+}
+main #sounds:nth-child(4) {
+  grid-area: D;
+}
+
+@media (max-width: 750px) {
+  .focus-wrap {
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+  #controls {
+    gap: 4rem;
+  }
+  #sounds {
+    margin-top: -5rem;
+  }
+};
