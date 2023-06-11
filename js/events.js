@@ -27,10 +27,15 @@ export default function ({ sounds, timer, isRunning }) {
       , rain = btnRainSound.classList.contains("playing");
 
       if(!isRunning) {
-        if(fire === true) sounds.pressButtonFire();
-        else if(forest === true) sounds.pressButtonForest();
-        else if(coffee === true) sounds.pressButtonCafeteria();
-        else sounds.pressButtonRain();
+        if(fire === true) {
+          sounds.pressButtonFire();
+        } else if(forest === true) {
+          sounds.pressButtonForest();
+        } else if(coffee === true) {
+           sounds.pressButtonCafeteria();
+        } else {
+          sounds.pressButtonRain();
+        }
         isRunning = true;
         timer.countDown();
       } else {
