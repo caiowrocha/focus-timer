@@ -1,4 +1,4 @@
-# ⏲️ ![Focus timer, track your productivity](https://focus-timer-2-weld.vercel.app/)
+# ⏲️ [Focus timer, track your productivity](https://focus-timer-2-weld.vercel.app/)
 
 > <img src="./design/focustimer-thumbnail.png" width="600" />
  
